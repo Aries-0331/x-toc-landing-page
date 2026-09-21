@@ -38,10 +38,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .playground-shell { width: min(1440px, 100%); min-height: 100vh; margin: 0 auto; display: grid; grid-template-columns: 250px minmax(600px, 760px) minmax(320px, 1fr); }
 .site-sidebar { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; padding: 25px 26px 24px; }
-.site-brand { display: flex; align-items: center; gap: 10px; padding: 0; text-align: left; }
-.site-brand img { border-radius: 8px; }
-.site-brand b { display: block; font-size: 1.4rem; line-height: 1; letter-spacing: -.04em; }
-.site-brand small { display: block; margin-top: 5px; color: var(--muted); font-size: .68rem; white-space: nowrap; }
+.site-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 0; text-align: left; }
+.site-brand img { width: 132px; height: auto; }
+.site-brand small { display: block; color: var(--muted); font-size: .68rem; white-space: nowrap; }
 .site-sidebar nav { display: grid; gap: 3px; margin-top: 32px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
 .site-sidebar nav button, .site-sidebar nav a { position: relative; min-height: 54px; display: flex; align-items: center; gap: 18px; padding: 0 13px; border-radius: 999px; font-size: 1.05rem; text-align: left; }
 .site-sidebar nav svg { width: 23px; }

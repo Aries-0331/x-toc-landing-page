@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="public/logo.png" width="96" height="96" alt="X-TOC logo">
-</p>
-
-<h1 align="center">X-TOC Landing Page</h1>
+<h1 align="center">
+  <img src="public/wordmark.svg" width="280" alt="X-TOC"><br>
+  Landing Page
+</h1>
 
 <p align="center">
   X-TOC 的公开网站。X-TOC 是一个面向 X/Twitter 长文的阅读目录与轻量摘录浏览器扩展。

@@ -449,7 +449,7 @@ export function XtocExperience({ initialView }: { initialView: View }) {
   return (
     <div className={`playground-shell view-shell${view === "clips" ? " clips-mode" : ""}${view === "docs" ? " docs-mode" : ""}`}>
       <aside className="site-sidebar">
-        <button className="site-brand" onClick={() => openView("home")}><Image src="/logo.png" alt="" width={44} height={44} priority /><span><b>X-TOC</b><small>TOC & Clips for X Articles</small></span></button>
+        <button className="site-brand" onClick={() => openView("home")}><Image src="/wordmark.svg" alt="X-TOC" width={132} height={32} priority /><small>TOC & Clips for X Articles</small></button>
         <nav aria-label="Primary navigation">
           <a href={viewPaths.home} aria-current={view === "home" ? "page" : undefined} className={view === "home" ? "active" : ""} onClick={(event) => navigateLink(event, "home")}><House aria-hidden="true" /><span>Home</span></a>
           <a href={viewPaths.article} aria-current={view === "article" ? "page" : undefined} className={view === "article" ? "active" : ""} onClick={(event) => navigateLink(event, "article")}><FileText aria-hidden="true" /><span>Article</span></a>

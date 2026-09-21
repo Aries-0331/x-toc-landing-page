@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="public/logo.png" width="96" height="96" alt="X-TOC logo">
-</p>
-
-<h1 align="center">X-TOC Landing Page</h1>
+<h1 align="center">
+  <img src="public/wordmark.svg" width="280" alt="X-TOC"><br>
+  Landing Page
+</h1>
 
 <p align="center">
   Public website for X-TOC, a browser extension for reading navigation and lightweight clipping on X/Twitter long-form articles.
