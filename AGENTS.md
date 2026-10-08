@@ -1,11 +1,11 @@
-# X-TOC Website Agent Rules
+# XTOC Website Agent Rules
 
 ## Repository role
 
-This is the public X-TOC website and product-information repository. It is not the browser-extension source repository and must not become a private product-planning repository.
+This is the public XTOC website and product-information repository. It is not the browser-extension source repository and must not become a private product-planning repository.
 
 - Website work belongs here: public pages, current public documentation, website assets, and website maintenance.
-- Extension behavior belongs in the X-TOC extension repository. This site may describe only capabilities that are present in the released extension.
+- Extension behavior belongs in the XTOC extension repository. This site may describe only capabilities that are present in the released extension.
 - Keep the repository documentation set small. `README.md` is an entry point, not a product requirements document. Do not create `docs/` unless a current, public maintenance need requires it.
 
 ## Public and private boundary
@@ -18,7 +18,7 @@ Never add secrets, tokens, webhook secrets, real credentials, private endpoints,
 
 ## Public claims
 
-- Check product copy against the released X-TOC README, release, and current shipped implementation.
+- Check product copy against the released XTOC README, release, and current shipped implementation.
 - Do not present planned, experimental, typed-only, or private integrations as released features.
 - Keep privacy statements narrow and verifiable. Distinguish saved clip data from broader claims about all browser or website data.
 - Preserve the boundary between the website and extension repositories, and keep source and store links current.

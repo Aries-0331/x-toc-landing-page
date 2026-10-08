@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img src="public/wordmark.svg" width="280" alt="X-TOC"><br>
+  <img src="public/wordmark.svg" width="280" alt="XTOC"><br>
   Landing Page
 </h1>
 
 <p align="center">
-  X-TOC 的公开网站。X-TOC 是一个面向 X/Twitter 长文的阅读目录与轻量摘录浏览器扩展。
+  XTOC 的公开网站。XTOC 是一个面向 X/Twitter 长文的阅读目录与轻量摘录浏览器扩展。
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 
 ## 仓库定位
 
-本仓库用于维护 X-TOC 的公开 landing page 和公开文档。
+本仓库用于维护 XTOC 的公开 landing page 和公开文档。
 
 - 扩展源码：<https://github.com/HiAriesZhou/x-toc>
 - 网站源码：<https://github.com/HiAriesZhou/x-toc-landing-page>
@@ -21,7 +21,7 @@
 
 ## 公开产品文案
 
-X-TOC 为 X/Twitter 长文提供文章目录、可移动阅读面板和轻量本地摘录能力。
+XTOC 为 X/Twitter 长文提供文章目录、可移动阅读面板和轻量本地摘录能力。
 
 公开文案应与已发布扩展能力保持一致：
 
@@ -47,6 +47,6 @@ npm run build
 ## 内容规范
 
 - README 保持为入口页。
-- 公开网站文案应与已发布的 X-TOC 扩展能力一致。
+- 公开网站文案应与已发布的 XTOC 扩展能力一致。
 - 未发布规划保留在私有文档中。
 - 不把未发布集成描述为已上线产品功能。
