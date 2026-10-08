@@ -42,9 +42,7 @@ Report:
 - files changed and why;
 - lint, build, and browser checks performed, including any limitations;
 - the released-extension sources used to verify public claims;
-- public/private and secret-safety review results;
-- Free/Pro naming impact, if any;
-- LiteContext and ContextItem impact, if any; and
+- public/private and secret-safety review results; and
 - unresolved questions or follow-up work.
 
 Do not commit, push, publish, or deploy unless the user explicitly requests it.
