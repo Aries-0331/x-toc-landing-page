@@ -18,31 +18,31 @@ const displayFont = Libre_Caslon_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://x-toc.vercel.app"),
   title: {
-    default: "X-TOC | Navigate and Clip X Articles",
-    template: "%s | X-TOC",
+    default: "XTOC | Navigate and Clip X Articles",
+    template: "%s | XTOC",
   },
   description:
     "Jump between sections in long X articles, save useful passages locally, and export your clips as Markdown or JSON.",
   openGraph: {
-    title: "X-TOC | Navigate and Clip X Articles",
+    title: "XTOC | Navigate and Clip X Articles",
     description: "Keep article structure visible. Save useful passages locally.",
     type: "website",
-    siteName: "X-TOC",
+    siteName: "XTOC",
     images: [{
       url: "/images/x-toc-social-1280x640.png",
       width: 1280,
       height: 640,
       type: "image/png",
-      alt: "X-TOC demo: navigate an article with a collapsible pinned table of contents and save selected passages locally.",
+      alt: "XTOC demo: navigate an article with a collapsible pinned table of contents and save selected passages locally.",
     }],
   },
   twitter: {
     card: "summary_large_image",
     images: [{
       url: "/images/x-toc-social-1280x640.png",
-      alt: "X-TOC demo: navigate an article with a collapsible pinned table of contents and save selected passages locally.",
+      alt: "XTOC demo: navigate an article with a collapsible pinned table of contents and save selected passages locally.",
     }],
-    title: "X-TOC | Navigate and Clip X Articles",
+    title: "XTOC | Navigate and Clip X Articles",
     description: "Keep article structure visible. Save useful passages locally.",
   },
 };
@@ -64,7 +64,7 @@ export default function RootLayout({
       <body className={`${uiFont.variable} ${displayFont.variable}`}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "SoftwareApplication",
-          "@id": "https://x-toc.vercel.app/#software", name: "X-TOC", alternateName: "xtoc",
+          "@id": "https://x-toc.vercel.app/#software", name: "XTOC", alternateName: "X-TOC",
           url: "https://x-toc.vercel.app/", applicationCategory: "BrowserApplication",
           softwareRequirements: "Desktop Chrome; supported X/Twitter long-form articles",
           description: "A table of contents for X Articles with local clips, tags, notes, and Markdown or JSON export.",

@@ -38,7 +38,7 @@ const articleSections = [
     title: "Make the structure visible",
     lead: "An outline gives a long read a shape. The opening tells you where you are; the headings tell you where you can go next.",
     quote: "A table of contents is a small map. It gives you the freedom to explore without losing your place.",
-    body: "Try the contents panel beside this article. Jump to another section, then return here. The current section stays highlighted as you read. X-TOC brings this simple navigation to long-form articles on X.",
+    body: "Try the contents panel beside this article. Jump to another section, then return here. The current section stays highlighted as you read. XTOC brings this simple navigation to long-form articles on X.",
   },
   {
     title: "Turn insights into a personal library",
@@ -62,7 +62,7 @@ const tocEntries = [
 const demoArticle = {
   id: "the-art-of-keeping-your-place",
   title: "The art of keeping your place.",
-  authorName: "X-TOC",
+  authorName: "XTOC",
   authorHandle: "@xtoc",
 };
 
@@ -102,7 +102,7 @@ function getActiveSectionIndex(tops: number[], isAtPageEnd: boolean) {
 }
 
 function ProductAuthor() {
-  return <div className="feed-author"><strong>X-TOC</strong><span>@xtoc · Sep 15</span></div>;
+  return <div className="feed-author"><strong>XTOC</strong><span>@xtoc · Sep 15</span></div>;
 }
 
 function ArticleCover({ onOpen }: { onOpen: () => void }) {
@@ -145,7 +145,7 @@ function RealTocPanel({ activeIndex, collapsed, onCollapse, onClose, onOpenClips
   }, []);
 
   return (
-    <section className={`real-toc-panel${collapsed ? " collapsed" : ""}${position ? " dragged" : ""}`} aria-label="X-TOC article contents" style={position ? { left: position.x, top: position.y } : undefined}>
+    <section className={`real-toc-panel${collapsed ? " collapsed" : ""}${position ? " dragged" : ""}`} aria-label="XTOC article contents" style={position ? { left: position.x, top: position.y } : undefined}>
       <header className="toc-panel-header" onPointerDown={(event) => {
         if ((event.target as HTMLElement).closest("button")) return;
         const rect = event.currentTarget.parentElement?.getBoundingClientRect();
@@ -154,7 +154,7 @@ function RealTocPanel({ activeIndex, collapsed, onCollapse, onClose, onOpenClips
         setPosition({ x: rect.left, y: rect.top });
       }}>
         <GripVertical className="drag-handle" aria-hidden="true" />
-        <span className="toc-panel-title"><b>X-TOC</b><span aria-hidden="true"> · </span>Contents</span>
+        <span className="toc-panel-title"><b>XTOC</b><span aria-hidden="true"> · </span>Contents</span>
         <span className="toc-panel-actions">
           <button type="button" onClick={onOpenClips} aria-label="Open clips" title="Open clips"><Bookmark aria-hidden="true" /><span>Clips</span></button>
           <button type="button" onClick={onCollapse} aria-label={collapsed ? "Expand table of contents" : "Collapse table of contents"} aria-expanded={!collapsed}><ChevronUp className="collapse-icon" aria-hidden="true" /></button>
@@ -356,7 +356,7 @@ export function XtocExperience({ initialView }: { initialView: View }) {
     if (!chosen.length) return;
     const content = format === "json"
       ? JSON.stringify({ demo: true, article: "The art of keeping your place.", clips: chosen }, null, 2)
-      : `# The art of keeping your place.\n\nX-TOC website demo · sample article\n\n${chosen.map((clip) => `> ${clip.text}\n\n${clip.note ? `Note: ${clip.note}\n` : ""}${clip.tags.length ? `Tags: ${clip.tags.join(", ")}\n` : ""}`).join("\n---\n\n")}`;
+      : `# The art of keeping your place.\n\nXTOC website demo · sample article\n\n${chosen.map((clip) => `> ${clip.text}\n\n${clip.note ? `Note: ${clip.note}\n` : ""}${clip.tags.length ? `Tags: ${clip.tags.join(", ")}\n` : ""}`).join("\n---\n\n")}`;
     const url = URL.createObjectURL(new Blob([content], { type: format === "json" ? "application/json" : "text/markdown" }));
     const anchor = document.createElement("a");
     anchor.href = url;
@@ -449,7 +449,7 @@ export function XtocExperience({ initialView }: { initialView: View }) {
   return (
     <div className={`playground-shell view-shell${view === "clips" ? " clips-mode" : ""}${view === "docs" ? " docs-mode" : ""}`}>
       <aside className="site-sidebar">
-        <button className="site-brand" onClick={() => openView("home")}><Image src="/wordmark.svg" alt="X-TOC" width={132} height={32} priority /><small>TOC & Clips for X Articles</small></button>
+        <button className="site-brand" onClick={() => openView("home")}><Image src="/wordmark.svg" alt="XTOC" width={132} height={32} priority /><small>TOC & Clips for X Articles</small></button>
         <nav aria-label="Primary navigation">
           <a href={viewPaths.home} aria-current={view === "home" ? "page" : undefined} className={view === "home" ? "active" : ""} onClick={(event) => navigateLink(event, "home")}><House aria-hidden="true" /><span>Home</span></a>
           <a href={viewPaths.article} aria-current={view === "article" ? "page" : undefined} className={view === "article" ? "active" : ""} onClick={(event) => navigateLink(event, "article")}><FileText aria-hidden="true" /><span>Article</span></a>
@@ -473,14 +473,14 @@ export function XtocExperience({ initialView }: { initialView: View }) {
         {view === "docs" && <DocsMain />}
 
         {view === "home" && <div className="timeline">
-          <article className="feed-post pinned-post"><p className="pinned-label"><Bookmark aria-hidden="true" /> Pinned</p><Image className="post-avatar" src="/logo.png" alt="" width={38} height={38} /><ProductAuthor /><p className="feed-copy">A map for the long reads you never finish.</p><p className="feed-muted">X-TOC (xtoc) adds a table of contents to X Articles. Save passages locally with tags and notes, then export them as Markdown or JSON.</p><button ref={previewTrigger} className="product-film" onClick={() => setDemoOpen(true)} aria-label="Play the 40-second X-TOC product film"><Image src="/videos/x-toc-poster.jpg" alt="An X article with the X-TOC contents panel open" width={1920} height={1240} priority /><span className="film-play"><Play aria-hidden="true" /></span><span className="film-label">Watch X-TOC in action · 0:40</span></button></article>
+          <article className="feed-post pinned-post"><p className="pinned-label"><Bookmark aria-hidden="true" /> Pinned</p><Image className="post-avatar" src="/logo.png" alt="" width={38} height={38} /><ProductAuthor /><p className="feed-copy">A map for the long reads you never finish.</p><p className="feed-muted">XTOC adds a table of contents to X Articles. Save passages locally with tags and notes, then export them as Markdown or JSON.</p><button ref={previewTrigger} className="product-film" onClick={() => setDemoOpen(true)} aria-label="Play the 40-second XTOC product film"><Image src="/videos/x-toc-poster.jpg" alt="An X article with the XTOC contents panel open" width={1920} height={1240} priority /><span className="film-play"><Play aria-hidden="true" /></span><span className="film-label">Watch XTOC in action · 0:40</span></button></article>
           <article className="feed-post"><Image className="post-avatar" src="/logo.png" alt="" width={38} height={38} /><ProductAuthor /><p className="feed-copy">A new article on reading with structure.</p><ArticleCover onOpen={() => openView("article")} /></article>
           <article className="feed-post excerpt-post"><span className="post-avatar excerpt-avatar"><Scissors aria-hidden="true" /></span><p className="excerpt-meta">{userClipCount ? "You saved a clip" : "An excerpt worth keeping"} · Demo</p><blockquote>{clips[0]?.text ?? sampleClips[0].text}</blockquote><button className="text-action" onClick={() => openView("clips")}>Open in Clips <ArrowRight aria-hidden="true" /></button></article>
-          <article className="feed-post final-post"><Image className="post-avatar" src="/logo.png" alt="" width={38} height={38} /><ProductAuthor /><p className="feed-copy">A small tool for the moments when a long read deserves your full attention.</p><p className="feed-muted">An outline beside the article. Useful passages within reach. That’s X-TOC.</p><a className="text-action" href={chromeStoreUrl} target="_blank" rel="noopener noreferrer">Take it to X <ArrowRight aria-hidden="true" /></a></article>
+          <article className="feed-post final-post"><Image className="post-avatar" src="/logo.png" alt="" width={38} height={38} /><ProductAuthor /><p className="feed-copy">A small tool for the moments when a long read deserves your full attention.</p><p className="feed-muted">An outline beside the article. Useful passages within reach. That’s XTOC.</p><a className="text-action" href={chromeStoreUrl} target="_blank" rel="noopener noreferrer">Take it to X <ArrowRight aria-hidden="true" /></a></article>
         </div>}
 
         {view === "article" && <article className="demo-article" onMouseUp={captureSelection} onKeyUp={captureSelection}>
-          <header className="article-lead" data-toc-index="0"><p>THE READING SERIES / 01</p><h2>The art of<br />keeping your place.</h2><div>How structure turns long reads into a calmer, more focused experience.</div><span className="article-byline"><Image src="/logo.png" alt="" width={36} height={36} /><span><b>X-TOC</b><small>Sep 15, 2026 · 5 min read · Demo article</small></span></span><aside>Try the contents panel, then select a sentence to save it.</aside></header>
+          <header className="article-lead" data-toc-index="0"><p>THE READING SERIES / 01</p><h2>The art of<br />keeping your place.</h2><div>How structure turns long reads into a calmer, more focused experience.</div><span className="article-byline"><Image src="/logo.png" alt="" width={36} height={36} /><span><b>XTOC</b><small>Sep 15, 2026 · 5 min read · Demo article</small></span></span><aside>Try the contents panel, then select a sentence to save it.</aside></header>
           {articleSections.map((section, index) => <section className="article-section" data-toc-index={index + 1} key={section.title}><span>0{index + 1}</span><h3>{section.title}</h3><p>{section.lead}</p><blockquote>{section.quote}</blockquote><p>{section.body}</p></section>)}
           <footer className="article-finish"><Scissors aria-hidden="true" /><h3>A good line is worth keeping.</h3><button onClick={() => openView("clips")}>Visit your Clips <ArrowRight aria-hidden="true" /></button></footer>
         </article>}
@@ -561,7 +561,7 @@ export function XtocExperience({ initialView }: { initialView: View }) {
       </main>
 
       <aside className={`context-rail view-rail${view === "home" ? " home-context" : ""}${view === "article" && tocVisible ? " toc-open" : ""}${view === "clips" ? " clips-context" : ""}${view === "docs" ? " docs-rail" : ""}`} key={`${view}-rail`}>
-        {view === "docs" ? <DocsRail /> : view === "clips" ? null : view === "article" ? (tocVisible ? <RealTocPanel activeIndex={activeIndex} collapsed={tocCollapsed} onCollapse={() => setTocCollapsed((current) => !current)} onClose={() => setTocVisible(false)} onOpenClips={() => openView("clips")} onSelect={jumpToSection} /> : <button className="restore-toc" onClick={() => setTocVisible(true)}><List aria-hidden="true" /> Show contents</button>) : <><p className="rail-label">GET STARTED</p><p className="rail-number">01</p><h2>Read, with<br />an outline.</h2><p className="rail-lede">Open the article, choose a section,<br />save a sentence.</p><div className="rail-steps">{[["Start with the reader", "See how the outline appears next to the article."], ["Jump between sections", "Click a heading and go deeper instantly."], ["Save what matters", "Keep a sentence, build your own library."]].map(([title, body], index) => <button key={title} onClick={() => jumpToSection(index + 1)}><b>{index + 1}</b><span><strong>{title}</strong><p>{body}</p></span></button>)}</div><button className="rail-clips" onClick={() => openView("clips")}><span>YOUR DEMO CLIPS</span><div><b>{userClipCount}</b><p>{userClipCount ? "Your good lines are waiting." : "Save your first clip to see it here."}</p></div></button><blockquote className="rail-quote">“A well-structured read<br />goes further.”<cite>— X-TOC</cite></blockquote><p className="rail-note">An interactive playground.<br />No installation needed to try.</p></>}
+        {view === "docs" ? <DocsRail /> : view === "clips" ? null : view === "article" ? (tocVisible ? <RealTocPanel activeIndex={activeIndex} collapsed={tocCollapsed} onCollapse={() => setTocCollapsed((current) => !current)} onClose={() => setTocVisible(false)} onOpenClips={() => openView("clips")} onSelect={jumpToSection} /> : <button className="restore-toc" onClick={() => setTocVisible(true)}><List aria-hidden="true" /> Show contents</button>) : <><p className="rail-label">GET STARTED</p><p className="rail-number">01</p><h2>Read, with<br />an outline.</h2><p className="rail-lede">Open the article, choose a section,<br />save a sentence.</p><div className="rail-steps">{[["Start with the reader", "See how the outline appears next to the article."], ["Jump between sections", "Click a heading and go deeper instantly."], ["Save what matters", "Keep a sentence, build your own library."]].map(([title, body], index) => <button key={title} onClick={() => jumpToSection(index + 1)}><b>{index + 1}</b><span><strong>{title}</strong><p>{body}</p></span></button>)}</div><button className="rail-clips" onClick={() => openView("clips")}><span>YOUR DEMO CLIPS</span><div><b>{userClipCount}</b><p>{userClipCount ? "Your good lines are waiting." : "Save your first clip to see it here."}</p></div></button><blockquote className="rail-quote">“A well-structured read<br />goes further.”<cite>— XTOC</cite></blockquote><p className="rail-note">An interactive playground.<br />No installation needed to try.</p></>}
       </aside>
 
       {activeEditorClip && <aside className="clip-editor-popover" role="dialog" aria-modal="false" aria-labelledby="clip-editor-heading">
@@ -581,9 +581,9 @@ export function XtocExperience({ initialView }: { initialView: View }) {
         </form>
       </aside>}
 
-      {selection && <div className="selection-action"><span>{selection.length} characters selected</span><button onMouseDown={(event) => event.preventDefault()} onClick={saveSelection}><Scissors aria-hidden="true" /> Save to X-TOC</button></div>}
+      {selection && <div className="selection-action"><span>{selection.length} characters selected</span><button onMouseDown={(event) => event.preventDefault()} onClick={saveSelection}><Scissors aria-hidden="true" /> Save to XTOC</button></div>}
       {toast && <div className="site-toast" role="status"><Check aria-hidden="true" />{toast}{toast.includes("saved") && <button onClick={() => openView("clips")}>View Clips</button>}</div>}
-      {demoOpen && <div className="demo-dialog-backdrop" onMouseDown={() => setDemoOpen(false)}><section className="product-film-dialog" role="dialog" aria-modal="true" aria-label="X-TOC product film" onMouseDown={(event) => event.stopPropagation()}><header><span>X-TOC / IN PRACTICE</span><button ref={previewClose} onClick={() => setDemoOpen(false)} aria-label="Close video"><X aria-hidden="true" /></button></header><video controls autoPlay playsInline preload="metadata" poster="/videos/x-toc-poster.jpg" aria-label="X-TOC demonstration: article navigation, clipping, tags, notes, and export"><source src="/videos/x-toc-demo.mp4" type="video/mp4" /><track kind="captions" src="/videos/x-toc-demo.vtt" srcLang="en" label="English" />Your browser does not support video playback.</video><footer><a href={chromeStoreUrl} target="_blank" rel="noopener noreferrer">Get X-TOC for desktop Chrome <Download aria-hidden="true" /></a><button onClick={() => { setDemoOpen(false); openView("article"); }}>Try it yourself <ArrowRight aria-hidden="true" /></button></footer></section></div>}
+      {demoOpen && <div className="demo-dialog-backdrop" onMouseDown={() => setDemoOpen(false)}><section className="product-film-dialog" role="dialog" aria-modal="true" aria-label="XTOC product film" onMouseDown={(event) => event.stopPropagation()}><header><span>XTOC / IN PRACTICE</span><button ref={previewClose} onClick={() => setDemoOpen(false)} aria-label="Close video"><X aria-hidden="true" /></button></header><video controls autoPlay playsInline preload="metadata" poster="/videos/x-toc-poster.jpg" aria-label="XTOC demonstration: article navigation, clipping, tags, notes, and export"><source src="/videos/x-toc-demo.mp4" type="video/mp4" /><track kind="captions" src="/videos/x-toc-demo.vtt" srcLang="en" label="English" />Your browser does not support video playback.</video><footer><a href={chromeStoreUrl} target="_blank" rel="noopener noreferrer">Get XTOC for desktop Chrome <Download aria-hidden="true" /></a><button onClick={() => { setDemoOpen(false); openView("article"); }}>Try it yourself <ArrowRight aria-hidden="true" /></button></footer></section></div>}
     </div>
   );
 }

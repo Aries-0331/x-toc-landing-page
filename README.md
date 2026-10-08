@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img src="public/wordmark.svg" width="280" alt="X-TOC"><br>
+  <img src="public/wordmark.svg" width="280" alt="XTOC"><br>
   Landing Page
 </h1>
 
 <p align="center">
-  Public website for X-TOC, a browser extension for reading navigation and lightweight clipping on X/Twitter long-form articles.
+  Public website for XTOC, a browser extension for reading navigation and lightweight clipping on X/Twitter long-form articles.
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 
 ## Repository Role
 
-This repository contains the public landing page and public docs for X-TOC.
+This repository contains the public landing page and public docs for XTOC.
 
 - Extension source: <https://github.com/HiAriesZhou/x-toc>
 - Website source: <https://github.com/HiAriesZhou/x-toc-landing-page>
@@ -21,7 +21,7 @@ This repository contains the public landing page and public docs for X-TOC.
 
 ## Public Product Copy
 
-X-TOC adds a table of contents, a movable reading panel, and lightweight local clipping to X/Twitter long-form articles.
+XTOC adds a table of contents, a movable reading panel, and lightweight local clipping to X/Twitter long-form articles.
 
 Public-facing claims should stay aligned with the released extension:
 
@@ -47,6 +47,6 @@ npm run build
 ## Content Guidelines
 
 - Keep this README as an entry point.
-- Keep public website copy aligned with the released X-TOC extension.
+- Keep public website copy aligned with the released XTOC extension.
 - Keep unreleased planning in private docs.
 - Do not describe unreleased integrations as shipped product features.
